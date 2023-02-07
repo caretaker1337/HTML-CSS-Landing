@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Raul</title>
     <link href="css/main.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="js/main.js"></script>
   </head>
 
   <body>
@@ -16,19 +18,19 @@
         </a>
       </div>
 
-      <div class="header_menu">
+      <div class="header__menu">
         <ul class="header__menu__list">
           <li class="header__menu__item">
-            <a class="header__menu__link" href="#">about</a>
+            <a class="header__menu__link" href="#about">about</a>
           </li>
           <li class="header__menu__item">
-            <a class="header__menu__link" href="#">what i do</a>
+            <a class="header__menu__link" href="#service">what i do</a>
           </li>
           <li class="header__menu__item">
-            <a class="header__menu__link" href="#">work</a>
+            <a class="header__menu__link" href="#work">work</a>
           </li>
           <li class="header__menu__item">
-            <a class="header__menu__link" href="#">contact</a>
+            <a class="header__menu__link" href="#contact">contact</a>
           </li>
         </ul>
       </div>
@@ -65,7 +67,7 @@
 
     <div class="content">
       <div class="container">
-        <div class="about">
+        <div class="about" id="about">
           <div class="about__media">
             <img class="about__media__image" src="images/about_img.png" alt="About image.">
           </div>
@@ -88,7 +90,7 @@
           </div>
         </div>
         
-        <div class="service">
+        <div class="service" id="service">
           <div class="service__heading">
             <p class="service__heading__subtitle">what i do</p>
             <h3 class="service__heading__title">SPECIALIZING IN</h3>
@@ -131,7 +133,7 @@
           </div>
         </div>
 
-        <div class="portfolio">
+        <div class="portfolio" id="work">
           <div class="portfolio__heading">
             <p class="portfolio__heading__subtitle">portfolio</p>
             <h3 class="portfolio__heading__title">latest projects</h3>
@@ -170,7 +172,7 @@
           </div>
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
           <div class="contact__bg">
             <h3 class="contact__title">Have any project in mind ?</h3>
             <button class="contact__button" type="button">Contact Me</button>

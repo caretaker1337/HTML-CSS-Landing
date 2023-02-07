@@ -29,6 +29,10 @@ ul {
   margin: 0;
 }
 
+button {
+  border: none;
+}
+
 .container {
   max-width: 1180px;
   padding-inline: 40px;
@@ -45,6 +49,7 @@ ul {
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 .header__logo__link {
@@ -75,11 +80,15 @@ ul {
   color: white;
   font-size: 18px;
   text-transform: uppercase;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
 }
 
-.header__menu__link:hover  {
-  color: #4C70EF;
+.header__menu__link:hover {
+  color: #4c70ef;
+}
+
+.hero {
+  position: relative;
 }
 
 .hero__image {
@@ -90,13 +99,13 @@ ul {
 .hero__content {
   color: white;
   position: absolute;
-  top: 50%;
+  top: calc(50% + 80px);
   left: 0;
   right: 0;
   max-width: 500px;
   margin-inline: auto;
   text-align: center;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% - 40px));
 }
 
 .hero__socials__list {
@@ -129,7 +138,7 @@ ul {
 }
 
 .content {
-  color: #B0ADAD;
+  color: #b0adad;
   overflow: hidden;
   background-color: #212121;
 }
@@ -138,7 +147,6 @@ ul {
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  margin-bottom: 120px;
 }
 
 .about__media {
@@ -154,7 +162,7 @@ ul {
 
 .about__content__subtitle {
   text-transform: uppercase;
-  color: #4C70EF;
+  color: #4c70ef;
   letter-spacing: 1px;
   font-size: 24px;
   font-family: "PoppinsSemiBold";
@@ -169,17 +177,17 @@ ul {
 }
 
 .about__content__text {
-  color: #B0ADAD;
+  color: #b0adad;
   font-size: 18px;
   font-family: "Poppins";
 }
 
-.about__content__text>p {
+.about__content__text > p {
   margin-bottom: 15px;
 }
 
 .service {
-  margin-bottom: 120px;
+  padding-top: 120px;
 }
 
 .service__heading {
@@ -188,7 +196,7 @@ ul {
 
 .service__heading__subtitle {
   text-transform: uppercase;
-  color: #4C70EF;
+  color: #4c70ef;
   letter-spacing: 1px;
   font-size: 24px;
   font-family: "PoppinsSemiBold";
@@ -209,7 +217,7 @@ ul {
 
 .service__item {
   border-radius: 12px;
-  background-color: #292C36;
+  background-color: #292c36;
   max-width: 480px;
   padding: 30px 25px 20px;
   margin-inline: 20px;
@@ -231,7 +239,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #38405A;
+  background-color: #38405a;
   height: 66px;
   margin-right: 15px;
   width: 66px;
@@ -245,13 +253,13 @@ ul {
 }
 
 .service__item__content__text {
-  color: #B0ADAD;
+  color: #b0adad;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
 
 .portfolio {
-  margin-bottom: 120px;
+  padding-top: 120px;
 }
 
 .portfolio__heading {
@@ -260,7 +268,7 @@ ul {
 
 .portfolio__heading__subtitle {
   text-transform: uppercase;
-  color: #4C70EF;
+  color: #4c70ef;
   letter-spacing: 1px;
   font-size: 24px;
   font-family: "PoppinsSemiBold";
@@ -282,9 +290,10 @@ ul {
 }
 
 .portfolio__item {
-  background-color: #292C36;
+  background-color: #292c36;
   border-radius: 12px;
   margin-right: 20px;
+  overflow: hidden;
 }
 
 .portfolio__item:last-of-type {
@@ -303,32 +312,33 @@ ul {
   text-transform: capitalize;
 }
 
-.portfolio__item__title, .portfolio__item__button {
+.portfolio__item__title,
+.portfolio__item__button {
   margin-left: 25px;
 }
 
 .portfolio__item__button {
   color: white;
-  background-color: #558FFF;
+  background-color: #558fff;
   appearance: none;
   border-radius: 6px;
   cursor: pointer;
   padding: 0 18px;
   height: 40px;
   margin-bottom: 20px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 14px;
   letter-spacing: 1px;
 }
 
 .portfolio__item__button:hover {
   background-color: white;
-  color: #558FFF;
-  /* opacity: 0.8; */
+  color: #558fff;
 }
 
 .contact {
   margin-bottom: 120px;
+  padding-top: 120px;
 }
 
 .contact__bg {
@@ -336,12 +346,11 @@ ul {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: #292C36;
+  background: #292c36;
   border-radius: 12px;
   max-width: 980px;
   height: 277px;
   margin-inline: auto;
-  margin-bottom: 120px;
 }
 
 .contact__title {
@@ -356,7 +365,7 @@ ul {
 .contact__button {
   cursor: pointer;
   color: white;
-  background-color: #558FFF;
+  background-color: #558fff;
   border-radius: 6px;
   font-family: "Poppins";
   font-size: 14px;
@@ -367,7 +376,7 @@ ul {
 
 .contact__button:hover {
   background-color: white;
-  color: #558FFF;
+  color: #558fff;
 }
 
 .footer {
@@ -375,7 +384,7 @@ ul {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: #292C36;
+  background: #292c36;
   width: 100%;
   height: 156px;
 }
@@ -383,7 +392,7 @@ ul {
 .footer__title {
   color: white;
   font-size: 32px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   line-height: 48px;
   margin-bottom: 8px;
 }
@@ -391,7 +400,131 @@ ul {
 .footer__text {
   color: white;
   font-size: 16px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   line-height: 24px;
   text-transform: uppercase;
+}
+
+/* ===================================== */
+/* =============== TABLET ============== */
+/* ===================================== */
+
+@media (max-width: 1023px) {
+  .container {
+    padding-inline: 15px;
+  }
+
+  .header {
+    padding-inline: 20px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+
+  .about {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  .about__media {
+    flex-basis: auto;
+  }
+
+  .service {
+    padding-top: 50px;
+  }
+
+  .portfolio {
+    padding-top: 50px;
+  }
+
+  .contact {
+    margin-bottom: 50px;
+    padding-top: 50px;
+  }
+}
+
+/* ===================================== */
+/* =============== MOBILE ============== */
+/* ===================================== */
+
+@media (max-width: 767px) {
+  .header {
+    background-color: #212121;
+    flex-direction: column;
+    height: auto;
+    padding-block: 20px;
+    position: static;
+    row-gap: 20px;
+  }
+
+  .header__menu__link {
+    white-space: nowrap;
+  }
+
+  .hero__image {
+    min-height: 235px;
+  }
+
+  .hero__content {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero__title {
+    margin-bottom: 15px;
+  }
+
+  .hero__undertitle {
+    margin-bottom: 15px;
+  }
+
+  .about__media {
+    margin-right: 0;
+    min-width: 0;
+  }
+
+  .about__content {
+    text-align: justify;
+  }
+
+  .service__content {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .service__item {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .service__item__header {
+    padding-left: 0;
+  }
+
+  .portfolio__content {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .portfolio__item {
+    margin-right: 0;
+    max-width: 350px;
+  }
+
+  .portfolio__item__image {
+    height: 280px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .contact__title {
+    font-size: 32px;
+    padding-inline: 10px;
+  }
 }
